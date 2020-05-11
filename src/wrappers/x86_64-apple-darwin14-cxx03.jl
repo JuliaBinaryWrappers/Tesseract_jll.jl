@@ -14,6 +14,7 @@ using Pango_jll
 PATH = ""
 LIBPATH = ""
 LIBPATH_env = "DYLD_FALLBACK_LIBRARY_PATH"
+LIBPATH_default = "~/lib:/usr/local/lib:/lib:/usr/lib"
 
 # Relative path to `tesseract`
 const tesseract_splitpath = ["bin", "tesseract"]
@@ -33,8 +34,9 @@ function tesseract(f::Function; adjust_PATH::Bool = true, adjust_LIBPATH::Bool =
         end
     end
     if adjust_LIBPATH
-        if !isempty(get(ENV, LIBPATH_env, ""))
-            env_mapping[LIBPATH_env] = string(LIBPATH, ':', ENV[LIBPATH_env])
+        LIBPATH_base = get(ENV, LIBPATH_env, expanduser(LIBPATH_default))
+        if !isempty(LIBPATH_base)
+            env_mapping[LIBPATH_env] = string(LIBPATH, ':', LIBPATH_base)
         else
             env_mapping[LIBPATH_env] = LIBPATH
         end
