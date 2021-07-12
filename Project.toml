@@ -1,6 +1,6 @@
 name = "Tesseract_jll"
 uuid = "efd95c89-babc-5260-8753-618084eaf9d7"
-version = "4.1.1+0"
+version = "4.1.100+0"
 
 [deps]
 Leptonica_jll = "6a1430e4-294a-53a5-a485-ec66ef6b843c"
@@ -12,8 +12,14 @@ JpegTurbo_jll = "aacddb02-875f-59d6-b918-886e6ef4fbf8"
 Cairo_jll = "83423d85-b0ee-5818-9007-b63ccbeb887a"
 Libtiff_jll = "89763e89-9b03-5906-acba-b20f662cd828"
 Giflib_jll = "59f7168a-df46-5410-90c8-f2779963d0ec"
+JLLWrappers = "692b3bcd-3c85-4b1f-b108-f13ce0eb3210"
+Artifacts = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
 CompilerSupportLibraries_jll = "e66e0078-7015-5450-92f7-15fbd957f2ae"
 libpng_jll = "b53b4c65-9356-5827-b1ea-8c7a1a84506f"
 
 [compat]
-julia = "1.0"
+JLLWrappers = "1.2.0"
+julia = "1.6"
+Cairo_jll = "1.16.1"
+Libtiff_jll = "4.3.0"
+Pango_jll = "1.47.0"
