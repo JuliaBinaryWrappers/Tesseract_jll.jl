@@ -1,6 +1,6 @@
 name = "Tesseract_jll"
 uuid = "efd95c89-babc-5260-8753-618084eaf9d7"
-version = "4.1.100+0"
+version = "5.1.0+0"
 
 [deps]
 Leptonica_jll = "6a1430e4-294a-53a5-a485-ec66ef6b843c"

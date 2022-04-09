@@ -11,13 +11,13 @@ using CompilerSupportLibraries_jll
 using Cairo_jll
 using Pango_jll
 JLLWrappers.@generate_wrapper_header("Tesseract")
-JLLWrappers.@declare_library_product(libtesseract, "libtesseract-4.dll")
+JLLWrappers.@declare_library_product(libtesseract, "libtesseract-5.dll")
 JLLWrappers.@declare_executable_product(tesseract)
 function __init__()
     JLLWrappers.@generate_init_header(Giflib_jll, JpegTurbo_jll, libpng_jll, Libtiff_jll, Zlib_jll, Leptonica_jll, CompilerSupportLibraries_jll, Cairo_jll, Pango_jll)
     JLLWrappers.@init_library_product(
         libtesseract,
-        "bin\\libtesseract-4.dll",
+        "bin\\libtesseract-5.dll",
         RTLD_LAZY | RTLD_DEEPBIND,
     )
 
